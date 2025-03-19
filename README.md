@@ -5,138 +5,141 @@
 Bu proje, Ankara'daki metro ağını simüle eden ve çeşitli metro güzergahı bulma algoritmalarını içeren bir Python uygulamasıdır.
 
 
-##  Başlarken
+# 🚇 Ankara Metro Ağı Projesi
+
+Bu proje, Ankara'daki metro ağını simüle eden ve çeşitli metro güzergahı bulma algoritmalarını içeren bir Python uygulamasıdır.
+
+---
+
+## 📌 Başlarken
 
 Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
-1.  **Depoyu klonlayın:**
+### 1️⃣ Depoyu Klonlayın:
 
-    ```bash
-    git clone [https://github.com/KullaniciAdiniz/metro-agi.git](https://www.google.com/search?q=https://github.com/KullaniciAdiniz/metro-agi.git)
-    cd metro-agi
-    ```
+```bash
+git clone https://github.com/KullaniciAdiniz/metro-agi.git
+cd metro-agi
+```
 
-2.  **Gerekli kütüphaneleri yükleyin:**
+### 2️⃣ Gerekli Kütüphaneleri Yükleyin:
 
-    ```bash
-    pip install rich networkx matplotlib
-    ```
+```bash
+pip install rich networkx matplotlib
+```
 
-3.  **Uygulamayı çalıştırın:**
+### 3️⃣ Uygulamayı Çalıştırın:
 
-    ```bash
-    python metro_agi.py
-    ```
+```bash
+python metro_agi.py
+```
 
+---
 
-
-## ️ Proje Yapısı
-
-🚇 Metro Ağı Simülasyonu
+## 📂 Proje Yapısı
 
 Bu proje, Python kullanarak bir metro ağı simülasyonu oluşturan bir sistemdir. Metro istasyonlarını, hatları, bağlantıları ve en hızlı/az aktarmalı rotaları bulma fonksiyonlarını içerir. Ayrıca, metro yoğunluk verilerini rastgele belirleyerek görselleştirme yapabilir.
 
+### 🚀 Özellikler
 
+✅ Metro istasyonlarını tanımlama ve hatlara ekleme  
+✅ İstasyonlar arasında bağlantı kurma (süre bazlı bağlantılar)  
+✅ En az aktarma ile en kısa rotayı bulma  
+✅ En hızlı rotayı hesaplama (süre bazlı)  
+✅ Metro ağının grafiksel olarak görselleştirilmesi  
+✅ Yoğunluk durumlarını takip etme ve rastgele atama  
+✅ Dil ve bölge desteği (Şu an için Türkçe ve İngilizce)  
 
-📌 Özellikler
+---
 
-🛤 Metro istasyonlarını tanımlama ve hatlara ekleme
+## 🏃‍♂️ Kurulum ve Çalıştırma
 
-🔗 İstasyonlar arasında bağlantı kurma (süre bazlı bağlantılar)
-
-🚆 En az aktarma ile en kısa rotayı bulma
-
-⏳ En hızlı rotayı hesaplama (süre bazlı)
-
-📊 Metro ağının grafiksel olarak görselleştirilmesi
-
-🔴 Yoğunluk durumlarını takip etme ve rastgele atama
-
-🌍 Dil ve bölge desteği (Şu an için Türkçe ve İngilizce desteği var)
-
-🚀 Kurulum ve Çalıştırma
-
-📥 Gerekli Kütüphaneler
-
-
+### 📥 Gerekli Kütüphaneler
 
 Proje için aşağıdaki kütüphanelere ihtiyacınız var:
 
+```bash
 pip install rich matplotlib networkx
+```
 
-🏃‍♂️ Çalıştırma
-
-
+### 🏃‍♂️ Çalıştırma
 
 Python dosyanızı çalıştırmak için:
 
+```bash
 python metro_agi.py
+```
 
+---
 
-📜 Kullanım
+## 📜 Kullanım
 
 Metro ağı oluşturduktan sonra, istasyon ekleyebilir, bağlantılar kurabilir ve en hızlı veya en az aktarmalı rotaları bulabilirsiniz.
 
-🔹 Örnek Kullanım
+### 🔹 Örnek Kullanım
 
-Bir istasyon ekleme:
+**Bir istasyon ekleme:**
 
+```python
 metro_agi.istasyon_ekle("K1", "Kızılay", "Kırmızı Hat")
+```
 
+**İki istasyon arasında bağlantı kurma:**
 
-İki istasyon arasında bağlantı kurma:
-
+```python
 metro_agi.baglanti_ekle("K1", "K2", 4)  # Kızılay ile Ulus arasında 4 dakika
+```
 
+**En az aktarma ile bir rota bulma:**
 
-En az aktarma ile bir rota bulma:
-
+```python
 rota = metro_agi.en_az_aktarma_bul("M1", "K4")
+```
 
+**En hızlı rota bulma:**
 
-En hızlı rota bulma:
-
+```python
 rota, sure = metro_agi.en_hizli_rota_bul("M1", "K4")
+```
 
+**Yoğunluk durumlarını rastgele oluşturma:**
 
-Yoğunluk durumlarını rastgele oluşturma:
-
+```python
 metro_agi.dinamik_yogunluk_ekle()
+```
 
+**Metro ağını görselleştirme:**
 
-Metro ağını görselleştirme:
-
+```python
 metro_agini_gorsellestir(metro_agi)
+```
 
+---
 
+## 📊 Metro Ağı Görselleştirme
 
-📊 Metro Ağı Görselleştirme
+Metro hattı ve istasyonlar `networkx` ve `matplotlib` kütüphaneleri ile grafiksel olarak çizilir.
 
-Metro hattı ve istasyonlar networkx ve matplotlib kütüphaneleri ile grafiksel olarak çizilir.
+📌 **Örnek Görsel:**
 
-Örnek Görsel:
+🟢 Yeşil noktalar: Yoğun olmayan istasyonlar  
+🔴 Kırmızı noktalar: Yoğun istasyonlar  
 
-🟢 Yeşil noktalar: Yoğun olmayan istasyonlar🔴 Kırmızı noktalar: Yoğun istasyonlar
+Metro Ağı Görselleştirme = (https://github.com/user-attachments/assets/84eab39c-c5ec-4d3f-b29f-dda879a9f639)
 
- TASARIM = (https://github.com/user-attachments/assets/84eab39c-c5ec-4d3f-b29f-dda879a9f639)
+---
 
+## 🛠 Geliştirme ve Katkıda Bulunma
 
+Projeye katkıda bulunmak isterseniz **pull request** gönderebilir veya **issue** açabilirsiniz. 🚀
 
-🛠 Geliştirme ve Katkıda Bulunma
+### ✅ Yapılacaklar:
 
-Projeye katkıda bulunmak isterseniz pull request gönderebilir veya issue açabilirsiniz. 🚀
+- 📌 Daha fazla dil desteği ekleme
+- 📌 Gerçek zamanlı yoğunluk verisi ekleme
+- 📌 Kullanıcıdan istasyon girişini alarak interaktif yapı oluşturma
 
-Yapılacaklar:
+👨‍💻 **Geliştirici:** [Oğuzhan Yazıcı]
 
-📌 Daha fazla dil desteği
-
-📌 Geliştirici: [Oğuzhan Yazıcı]
-
-📌 Gerçek zamanlı yoğunluk verisi ekleme
-
-📌 Kullanıcıdan istasyon girişini alarak interaktif yapı oluşturma
-
-Eğer projeyi beğendiysen ⭐ vermeyi unutma!
-
-
+🚀 Eğer projeyi beğendiysen **⭐ vererek** destek olabilirsin!
 
